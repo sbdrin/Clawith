@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: backend/services/core_services/collaboration_and_workspace
+title: 协作与工作区核心服务
+scope:
+    - backend/app/services/chat_session_service.py
+    - backend/app/services/collaboration.py
+    - backend/app/services/focus_service.py
+    - backend/app/services/group_chat_service.py
+    - backend/app/services/group_message_service.py
+    - backend/app/services/group_realtime.py
+    - backend/app/services/realtime.py
+    - backend/app/services/workspace_collaboration.py
+    - backend/app/services/workspace_locking.py
+    - backend/app/services/workspace_paths.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

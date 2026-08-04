@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/chat_and_intake
+title: 聊天运行时输入与流处理
+scope:
+    - backend/app/services/agent_runtime/chat_intake.py
+    - backend/app/services/agent_runtime/chat_stream.py
+    - backend/app/services/agent_runtime/event_stream.py
+    - backend/app/services/agent_runtime/channel_chat.py
+source_files: []
+depends_on: []
+related_to: []

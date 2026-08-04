@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/services/core_services/storage_and_files
+title: 存储与文件服务
+scope:
+    - backend/app/services/storage.py
+    - backend/app/services/text_extractor.py
+    - backend/app/services/group_file_service.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/core_features/file_and_storage
+    - path: backend/services/storage_runtime

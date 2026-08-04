@@ -1,0 +1,1032 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: main
+nodes_managed: true
+exported_at: "2026-08-04T10:41:56Z"
+modules:
+    "":
+        dir_name: Clawith 智能体协作平台
+        title: Clawith 智能体协作平台
+        scope:
+            - README.md
+            - README_ar.md
+            - README_es.md
+            - README_ja.md
+            - README_ko.md
+            - README_zh-CN.md
+            - CLAUDE.md
+            - AGENTS.md
+            - CONTRIBUTING.md
+            - PRIVATE_CHAT_FINISH_MIGRATION_PLAN.md
+            - .gitignore
+            - .gitattributes
+            - docker-compose.yml
+            - docker-compose.cd.yml
+            - docker-compose.ci.yml
+            - setup.sh
+            - restart.sh
+            - skills-lock.json
+            - .clawith-local-designs/
+            - .github/
+            - .env.example
+            - LICENSE
+        source_files: []
+        children:
+            - backend
+            - deploy
+            - frontend
+            - helm
+        depends_on: []
+        related_to: []
+    backend:
+        dir_name: 智能体平台后端核心
+        title: 智能体平台后端核心
+        scope:
+            - backend/
+        source_files: []
+        children:
+            - backend/agent_templates
+            - backend/api_endpoints
+            - backend/database_migrations
+            - backend/models
+            - backend/services
+        depends_on: []
+        related_to:
+            - path: frontend
+    backend/agent_templates:
+        dir_name: 智能体模板管理
+        title: 智能体模板管理
+        scope:
+            - backend/agent_templates/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/api_endpoints:
+        dir_name: API端点统一网关
+        title: API端点统一网关
+        scope:
+            - backend/app/api/
+        source_files: []
+        children:
+            - backend/api_endpoints/agent_management
+            - backend/api_endpoints/auth_identity
+            - backend/api_endpoints/communication_collaboration
+            - backend/api_endpoints/core_features
+            - backend/api_endpoints/enterprise_integrations
+        depends_on: []
+        related_to:
+            - path: backend/services
+    backend/api_endpoints/agent_management:
+        dir_name: 智能体管理与控制
+        title: 智能体管理与控制
+        scope:
+            - backend/app/api/agents.py
+            - backend/app/api/agent_credentials.py
+            - backend/app/api/agentbay_control.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: frontend/agent_management
+            - path: frontend/agent_management/agent_detail_view
+    backend/api_endpoints/auth_identity:
+        dir_name: 身份认证与单点登录管理
+        title: 身份认证与单点登录管理
+        scope:
+            - backend/app/api/auth.py
+            - backend/app/api/sso.py
+            - backend/app/api/users.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/authentication
+            - path: frontend/authentication
+    backend/api_endpoints/communication_collaboration:
+        dir_name: 实时通信与协作
+        title: 实时通信与协作
+        scope:
+            - backend/app/api/chat_sessions.py
+            - backend/app/api/messages.py
+            - backend/app/api/websocket.py
+            - backend/app/api/group_websocket.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/collaboration_and_workspace/chat_messaging
+            - path: frontend/group_collaboration
+            - path: frontend/group_collaboration/group_chat
+    backend/api_endpoints/core_features:
+        dir_name: 核心功能API网关
+        title: 核心功能API网关
+        scope:
+            - backend/app/api/activity.py
+            - backend/app/api/admin.py
+            - backend/app/api/advanced.py
+            - backend/app/api/directory.py
+            - backend/app/api/enterprise.py
+            - backend/app/api/experience.py
+            - backend/app/api/files.py
+            - backend/app/api/focus.py
+            - backend/app/api/gateway.py
+            - backend/app/api/notification.py
+            - backend/app/api/okr.py
+            - backend/app/api/onboarding.py
+            - backend/app/api/organization.py
+            - backend/app/api/pages.py
+            - backend/app/api/plaza.py
+            - backend/app/api/relationships.py
+            - backend/app/api/schedules.py
+            - backend/app/api/skills.py
+            - backend/app/api/tasks.py
+            - backend/app/api/teams.py
+            - backend/app/api/tenants.py
+            - backend/app/api/tools.py
+            - backend/app/api/triggers.py
+            - backend/app/api/upload.py
+            - backend/app/api/webhooks.py
+        source_files: []
+        children:
+            - backend/api_endpoints/core_features/collaboration_and_social
+            - backend/api_endpoints/core_features/file_and_storage
+            - backend/api_endpoints/core_features/organization_management
+            - backend/api_endpoints/core_features/platform_admin_and_onboarding
+            - backend/api_endpoints/core_features/task_and_workflow
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services
+            - path: frontend/enterprise_settings
+    backend/api_endpoints/core_features/collaboration_and_social:
+        dir_name: 协作与社交功能
+        title: 协作与社交功能
+        scope:
+            - backend/app/api/plaza.py
+            - backend/app/api/relationships.py
+            - backend/app/api/advanced.py
+            - backend/app/api/notification.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/api_endpoints/core_features/file_and_storage:
+        dir_name: 文件存储与焦点管理
+        title: 文件存储与焦点管理
+        scope:
+            - backend/app/api/files.py
+            - backend/app/api/upload.py
+            - backend/app/api/focus.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/storage_and_files
+    backend/api_endpoints/core_features/organization_management:
+        dir_name: 组织管理与用户权限
+        title: 组织管理与用户权限
+        scope:
+            - backend/app/api/organization.py
+            - backend/app/api/teams.py
+            - backend/app/api/users.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/api_endpoints/core_features/platform_admin_and_onboarding:
+        dir_name: 平台管理与用户引导模块
+        title: 平台管理与用户引导模块
+        scope:
+            - backend/app/api/admin.py
+            - backend/app/api/onboarding.py
+            - backend/app/api/enterprise.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/api_endpoints/core_features/task_and_workflow:
+        dir_name: 任务调度与工作流管理
+        title: 任务调度与工作流管理
+        scope:
+            - backend/app/api/tasks.py
+            - backend/app/api/schedules.py
+            - backend/app/api/okr.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/api_endpoints/enterprise_integrations:
+        dir_name: 企业集成API端点
+        title: 企业集成API端点
+        scope:
+            - backend/app/api/atlassian.py
+            - backend/app/api/dingtalk.py
+            - backend/app/api/discord_bot.py
+            - backend/app/api/feishu.py
+            - backend/app/api/google_workspace.py
+            - backend/app/api/slack.py
+            - backend/app/api/wechat.py
+            - backend/app/api/wecom.py
+            - backend/app/api/whatsapp.py
+        source_files: []
+        children:
+            - backend/api_endpoints/enterprise_integrations/chinese_enterprise_platforms
+            - backend/api_endpoints/enterprise_integrations/messaging_platforms
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/communication_channels
+    backend/api_endpoints/enterprise_integrations/chinese_enterprise_platforms:
+        dir_name: 中国主流企业平台集成
+        title: 中国主流企业平台集成
+        scope:
+            - backend/app/api/dingtalk.py
+            - backend/app/api/feishu.py
+            - backend/app/api/wechat.py
+            - backend/app/api/wecom.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/api_endpoints/enterprise_integrations/messaging_platforms:
+        dir_name: 消息平台集成
+        title: 消息平台集成
+        scope:
+            - backend/app/api/discord_bot.py
+            - backend/app/api/slack.py
+            - backend/app/api/whatsapp.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/database_migrations:
+        dir_name: 数据库迁移管理
+        title: 数据库迁移管理
+        scope:
+            - backend/alembic/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/models:
+        dir_name: 数据库模型层
+        title: 数据库模型层
+        scope:
+            - backend/app/models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/agent_templates
+            - path: backend/database_migrations
+            - path: backend/services
+            - path: backend/services/agent_runtime/persistence
+            - path: backend/services/agent_runtime/sessions_and_context
+            - path: backend/services/core_services
+            - path: backend/services/core_services/collaboration_and_workspace
+            - path: backend/services/core_services/okr_management
+            - path: backend/services/core_services/scheduling_and_tasks
+            - path: backend/services/trigger_runtime
+    backend/services:
+        dir_name: 智能体服务运行时平台
+        title: 智能体服务运行时平台
+        scope:
+            - backend/app/services/
+        source_files: []
+        children:
+            - backend/services/agent_runtime
+            - backend/services/core_services
+            - backend/services/document_conversion
+            - backend/services/llm
+            - backend/services/sandbox
+            - backend/services/skill_creator_files
+            - backend/services/storage_runtime
+            - backend/services/trigger_runtime
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints
+            - path: backend/models
+    backend/services/agent_runtime:
+        dir_name: 智能体运行时平台
+        title: 智能体运行时平台
+        scope:
+            - backend/app/services/agent_runtime/
+        source_files: []
+        children:
+            - backend/services/agent_runtime/chat_and_intake
+            - backend/services/agent_runtime/command_worker
+            - backend/services/agent_runtime/completions_and_triggers
+            - backend/services/agent_runtime/core_runtime
+            - backend/services/agent_runtime/delivery_and_channels
+            - backend/services/agent_runtime/groups
+            - backend/services/agent_runtime/persistence
+            - backend/services/agent_runtime/planning
+            - backend/services/agent_runtime/sessions_and_context
+            - backend/services/agent_runtime/tools_and_execution
+            - backend/services/agent_runtime/utilities_and_config
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/agent_management
+            - path: backend/services/llm
+            - path: backend/services/sandbox
+            - path: backend/services/storage_runtime
+    backend/services/agent_runtime/chat_and_intake:
+        dir_name: 聊天运行时输入与流处理
+        title: 聊天运行时输入与流处理
+        scope:
+            - backend/app/services/agent_runtime/chat_intake.py
+            - backend/app/services/agent_runtime/chat_stream.py
+            - backend/app/services/agent_runtime/event_stream.py
+            - backend/app/services/agent_runtime/channel_chat.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/agent_runtime/command_worker:
+        dir_name: 命令工作器与运行时协调
+        title: 命令工作器与运行时协调
+        scope:
+            - backend/app/services/agent_runtime/command_worker.py
+            - backend/app/services/agent_runtime/worker_service.py
+            - backend/app/services/agent_runtime/cycle_guard.py
+            - backend/app/services/agent_runtime/thread_lock.py
+            - backend/app/services/agent_runtime/thread_visibility.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/agent_runtime/completions_and_triggers:
+        dir_name: 运行时完成处理与触发器
+        title: 运行时完成处理与触发器
+        scope:
+            - backend/app/services/agent_runtime/a2a_completion.py
+            - backend/app/services/agent_runtime/heartbeat_completion.py
+            - backend/app/services/agent_runtime/onboarding_completion.py
+            - backend/app/services/agent_runtime/task_completion.py
+            - backend/app/services/agent_runtime/trigger_completion.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/agent_runtime/core_runtime:
+        dir_name: 智能体运行时核心引擎
+        title: 智能体运行时核心引擎
+        scope:
+            - backend/app/services/agent_runtime/a2a_runtime.py
+            - backend/app/services/agent_runtime/langgraph_driver.py
+            - backend/app/services/agent_runtime/graph.py
+            - backend/app/services/agent_runtime/state.py
+            - backend/app/services/agent_runtime/node_executor.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/llm
+    backend/services/agent_runtime/delivery_and_channels:
+        dir_name: 运行时消息传递与渠道交付
+        title: 运行时消息传递与渠道交付
+        scope:
+            - backend/app/services/agent_runtime/delivery.py
+            - backend/app/services/agent_runtime/channel_delivery.py
+            - backend/app/services/agent_runtime/channel_provider_delivery.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/core_services/communication_channels
+    backend/services/agent_runtime/groups:
+        dir_name: 群组智能体运行时服务
+        title: 群组智能体运行时服务
+        scope:
+            - backend/app/services/agent_runtime/group_at.py
+            - backend/app/services/agent_runtime/group_context_builder.py
+            - backend/app/services/agent_runtime/group_handoff.py
+            - backend/app/services/agent_runtime/group_runtime_tools.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/agent_runtime/persistence:
+        dir_name: 运行时持久化与检查点管理
+        title: 运行时持久化与检查点管理
+        scope:
+            - backend/app/services/agent_runtime/persistence.py
+            - backend/app/services/agent_runtime/checkpointer.py
+            - backend/app/services/agent_runtime/run_state_reader.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/services/agent_runtime/planning:
+        dir_name: 多智能体规划与调度系统
+        title: 多智能体规划与调度系统
+        scope:
+            - backend/app/services/agent_runtime/planning.py
+            - backend/app/services/agent_runtime/planning_scheduler.py
+            - backend/app/services/agent_runtime/model_capabilities.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/agent_runtime/sessions_and_context:
+        dir_name: 会话上下文管理与压缩服务
+        title: 会话上下文管理与压缩服务
+        scope:
+            - backend/app/services/agent_runtime/context_builder.py
+            - backend/app/services/agent_runtime/session_context_service.py
+            - backend/app/services/agent_runtime/session_context_background.py
+            - backend/app/services/agent_runtime/session_context_compactor.py
+            - backend/app/services/agent_runtime/session_context_completion.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/services/agent_runtime/tools_and_execution:
+        dir_name: 工具执行与结果管理
+        title: 工具执行与结果管理
+        scope:
+            - backend/app/services/agent_runtime/tool_execution.py
+            - backend/app/services/agent_runtime/tool_result_store.py
+            - backend/app/services/agent_runtime/tool_step_service.py
+            - backend/app/services/agent_runtime/tool_exchange.py
+            - backend/app/services/agent_runtime/async_tool_poll.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/sandbox
+    backend/services/agent_runtime/utilities_and_config:
+        dir_name: 运行时配置与契约管理
+        title: 运行时配置与契约管理
+        scope:
+            - backend/app/services/agent_runtime/__init__.py
+            - backend/app/services/agent_runtime/config.py
+            - backend/app/services/agent_runtime/contracts.py
+            - backend/app/services/agent_runtime/adapter.py
+            - backend/app/services/agent_runtime/cancel_source.py
+            - backend/app/services/agent_runtime/checkpoint_side_effects.py
+            - backend/app/services/agent_runtime/model_step_service.py
+            - backend/app/services/agent_runtime/runtime_model_settings.py
+            - backend/app/services/agent_runtime/scheduling_lane.py
+            - backend/app/services/agent_runtime/product_reconciler.py
+            - backend/app/services/agent_runtime/run_compactor.py
+            - backend/app/services/agent_runtime/verification.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/core_services:
+        dir_name: 核心服务集成平台
+        title: 核心服务集成平台
+        scope:
+            - backend/app/services/
+        source_files: []
+        children:
+            - backend/services/core_services/agent_management
+            - backend/services/core_services/authentication
+            - backend/services/core_services/collaboration_and_workspace
+            - backend/services/core_services/communication_channels
+            - backend/services/core_services/okr_management
+            - backend/services/core_services/scheduling_and_tasks
+            - backend/services/core_services/storage_and_files
+            - backend/services/core_services/utilities_and_misc
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/core_features
+            - path: backend/models
+    backend/services/core_services/agent_management:
+        dir_name: 智能体管理服务
+        title: 智能体管理服务
+        scope:
+            - backend/app/services/agent_manager.py
+            - backend/app/services/agent_context.py
+            - backend/app/services/agent_directory.py
+            - backend/app/services/agent_tools.py
+            - backend/app/services/agent_seeder.py
+            - backend/app/services/agentbay_client.py
+            - backend/app/services/agentbay_live.py
+            - backend/app/services/builtin_tool_definitions.py
+            - backend/app/services/access_relationships.py
+            - backend/app/services/autonomy_service.py
+        source_files: []
+        children:
+            - backend/services/core_services/agent_management/agent_core
+            - backend/services/core_services/agent_management/agent_utilities
+        depends_on: []
+        related_to:
+            - path: backend/services/agent_runtime
+    backend/services/core_services/agent_management/agent_core:
+        dir_name: 智能体核心服务
+        title: 智能体核心服务
+        scope:
+            - backend/app/services/agent_manager.py
+            - backend/app/services/agent_context.py
+            - backend/app/services/agent_directory.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/core_services/agent_management/agent_utilities:
+        dir_name: 智能体实用工具服务
+        title: 智能体实用工具服务
+        scope:
+            - backend/app/services/agent_seeder.py
+            - backend/app/services/access_relationships.py
+            - backend/app/services/autonomy_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/core_services/authentication:
+        dir_name: 身份认证与单点登录服务
+        title: 身份认证与单点登录服务
+        scope:
+            - backend/app/services/auth_provider.py
+            - backend/app/services/auth_registry.py
+            - backend/app/services/identity_provider_lookup.py
+            - backend/app/services/google_workspace_oauth.py
+            - backend/app/services/sso_service.py
+            - backend/app/services/registration_service.py
+            - backend/app/services/email_verification_service.py
+            - backend/app/services/password_reset_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/auth_identity
+    backend/services/core_services/collaboration_and_workspace:
+        dir_name: 协作与工作区核心服务
+        title: 协作与工作区核心服务
+        scope:
+            - backend/app/services/chat_session_service.py
+            - backend/app/services/collaboration.py
+            - backend/app/services/focus_service.py
+            - backend/app/services/group_chat_service.py
+            - backend/app/services/group_message_service.py
+            - backend/app/services/group_realtime.py
+            - backend/app/services/realtime.py
+            - backend/app/services/workspace_collaboration.py
+            - backend/app/services/workspace_locking.py
+            - backend/app/services/workspace_paths.py
+        source_files: []
+        children:
+            - backend/services/core_services/collaboration_and_workspace/chat_messaging
+            - backend/services/core_services/collaboration_and_workspace/workspace_management
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/services/core_services/collaboration_and_workspace/chat_messaging:
+        dir_name: 群聊与消息服务
+        title: 群聊与消息服务
+        scope:
+            - backend/app/services/chat_session_service.py
+            - backend/app/services/group_chat_service.py
+            - backend/app/services/group_message_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/communication_collaboration
+    backend/services/core_services/collaboration_and_workspace/workspace_management:
+        dir_name: 工作区协作与锁定管理
+        title: 工作区协作与锁定管理
+        scope:
+            - backend/app/services/workspace_collaboration.py
+            - backend/app/services/workspace_locking.py
+            - backend/app/services/workspace_paths.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/storage_runtime
+    backend/services/core_services/communication_channels:
+        dir_name: 多渠道通信平台核心服务
+        title: 多渠道通信平台核心服务
+        scope:
+            - backend/app/services/dingtalk_service.py
+            - backend/app/services/dingtalk_reaction.py
+            - backend/app/services/dingtalk_stream.py
+            - backend/app/services/dingtalk_token.py
+            - backend/app/services/feishu_service.py
+            - backend/app/services/feishu_ws.py
+            - backend/app/services/wechat_channel.py
+            - backend/app/services/wecom_service.py
+            - backend/app/services/wecom_stream.py
+            - backend/app/services/discord_gateway.py
+            - backend/app/services/email_service.py
+            - backend/app/services/notification_service.py
+            - backend/app/services/system_email_service.py
+            - backend/app/services/channel_session.py
+            - backend/app/services/channel_user_service.py
+        source_files: []
+        children:
+            - backend/services/core_services/communication_channels/dingtalk
+            - backend/services/core_services/communication_channels/email_and_notification
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/enterprise_integrations
+            - path: backend/services/agent_runtime/delivery_and_channels
+    backend/services/core_services/communication_channels/dingtalk:
+        dir_name: 钉钉通信渠道服务
+        title: 钉钉通信渠道服务
+        scope:
+            - backend/app/services/dingtalk_service.py
+            - backend/app/services/dingtalk_reaction.py
+            - backend/app/services/dingtalk_stream.py
+            - backend/app/services/dingtalk_token.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/core_services/communication_channels/email_and_notification:
+        dir_name: 邮件与通知渠道服务
+        title: 邮件与通知渠道服务
+        scope:
+            - backend/app/services/email_service.py
+            - backend/app/services/system_email_service.py
+            - backend/app/services/notification_service.py
+            - backend/app/services/channel_session.py
+            - backend/app/services/channel_user_service.py
+            - backend/app/services/discord_gateway.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/core_services/okr_management:
+        dir_name: OKR管理服务
+        title: OKR管理服务
+        scope:
+            - backend/app/services/okr_scheduler.py
+            - backend/app/services/okr_daily_collection.py
+            - backend/app/services/okr_reporting.py
+            - backend/app/services/okr_agent_hook.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/services/core_services/scheduling_and_tasks:
+        dir_name: 调度与任务执行系统
+        title: 调度与任务执行系统
+        scope:
+            - backend/app/services/scheduler.py
+            - backend/app/services/trigger_daemon.py
+            - backend/app/services/heartbeat.py
+            - backend/app/services/heartbeat_runtime.py
+            - backend/app/services/task_executor.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    backend/services/core_services/storage_and_files:
+        dir_name: 存储与文件服务
+        title: 存储与文件服务
+        scope:
+            - backend/app/services/storage.py
+            - backend/app/services/text_extractor.py
+            - backend/app/services/group_file_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/core_features/file_and_storage
+            - path: backend/services/storage_runtime
+    backend/services/core_services/utilities_and_misc:
+        dir_name: 核心服务工具库
+        title: 核心服务工具库
+        scope:
+            - backend/app/services/activity_logger.py
+            - backend/app/services/audit_logger.py
+            - backend/app/services/business_calendar.py
+            - backend/app/services/experience_retrieval.py
+            - backend/app/services/mcp_client.py
+            - backend/app/services/onboarding.py
+            - backend/app/services/participant_identity.py
+            - backend/app/services/platform_service.py
+            - backend/app/services/quota_guard.py
+            - backend/app/services/resource_discovery.py
+            - backend/app/services/skill_creator_content.py
+            - backend/app/services/skill_seeder.py
+            - backend/app/services/template_seeder.py
+            - backend/app/services/timezone_utils.py
+            - backend/app/services/token_tracker.py
+            - backend/app/services/tool_config.py
+            - backend/app/services/tool_seeder.py
+            - backend/app/services/vision_inject.py
+            - backend/app/services/enterprise_sync.py
+            - backend/app/services/org_sync_adapter.py
+            - backend/app/services/org_sync_service.py
+        source_files: []
+        children:
+            - backend/services/core_services/utilities_and_misc/platform_and_sync
+        depends_on: []
+        related_to: []
+    backend/services/core_services/utilities_and_misc/platform_and_sync:
+        dir_name: 平台服务与同步管理
+        title: 平台服务与同步管理
+        scope:
+            - backend/app/services/platform_service.py
+            - backend/app/services/enterprise_sync.py
+            - backend/app/services/org_sync_adapter.py
+            - backend/app/services/org_sync_service.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/document_conversion:
+        dir_name: 文档转换服务
+        title: 文档转换服务
+        scope:
+            - backend/app/services/document_conversion/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/storage_runtime
+    backend/services/llm:
+        dir_name: LLM服务模块
+        title: LLM服务模块
+        scope:
+            - backend/app/services/llm/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/agent_runtime
+            - path: backend/services/agent_runtime/core_runtime
+    backend/services/sandbox:
+        dir_name: 沙箱服务模块
+        title: 沙箱服务模块
+        scope:
+            - backend/app/services/sandbox/
+        source_files: []
+        children:
+            - backend/services/sandbox/api_backends
+            - backend/services/sandbox/core
+            - backend/services/sandbox/local_backends
+            - backend/services/sandbox/remote_backends
+        depends_on: []
+        related_to:
+            - path: backend/services/agent_runtime
+            - path: backend/services/agent_runtime/tools_and_execution
+    backend/services/sandbox/api_backends:
+        dir_name: API沙箱后端服务
+        title: API沙箱后端服务
+        scope:
+            - backend/app/services/sandbox/api/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/sandbox/core
+    backend/services/sandbox/core:
+        dir_name: 沙盒后端核心框架
+        title: 沙盒后端核心框架
+        scope:
+            - backend/app/services/sandbox/base.py
+            - backend/app/services/sandbox/config.py
+            - backend/app/services/sandbox/registry.py
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/sandbox/api_backends
+            - path: backend/services/sandbox/local_backends
+            - path: backend/services/sandbox/remote_backends
+    backend/services/sandbox/local_backends:
+        dir_name: 本地沙箱后端实现
+        title: 本地沙箱后端实现
+        scope:
+            - backend/app/services/sandbox/local/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/sandbox/core
+    backend/services/sandbox/remote_backends:
+        dir_name: 远程沙箱后端服务
+        title: 远程沙箱后端服务
+        scope:
+            - backend/app/services/sandbox/remote/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/sandbox/core
+    backend/services/skill_creator_files:
+        dir_name: 技能创建工具集
+        title: 技能创建工具集
+        scope:
+            - backend/app/services/skill_creator_files/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    backend/services/storage_runtime:
+        dir_name: 存储运行时管理
+        title: 存储运行时管理
+        scope:
+            - backend/app/services/storage_runtime/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/services/agent_runtime
+            - path: backend/services/core_services/collaboration_and_workspace/workspace_management
+            - path: backend/services/core_services/storage_and_files
+            - path: backend/services/document_conversion
+    backend/services/trigger_runtime:
+        dir_name: 触发器运行时服务
+        title: 触发器运行时服务
+        scope:
+            - backend/app/services/trigger_runtime/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/models
+    deploy:
+        dir_name: Docker Compose 部署配置
+        title: Docker Compose 部署配置
+        scope:
+            - deploy/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: helm
+    frontend:
+        dir_name: 智能协作平台前端
+        title: 智能协作平台前端
+        scope:
+            - frontend/
+        source_files: []
+        children:
+            - frontend/agent_management
+            - frontend/authentication
+            - frontend/enterprise_settings
+            - frontend/group_collaboration
+            - frontend/platform_features
+        depends_on: []
+        related_to:
+            - path: backend
+    frontend/agent_management:
+        dir_name: 智能体管理前端
+        title: 智能体管理前端
+        scope:
+            - frontend/src/pages/agent-detail/
+            - frontend/src/pages/AgentCreate.tsx
+            - frontend/src/pages/AgentDetail.tsx
+        source_files: []
+        children:
+            - frontend/agent_management/agent_detail_view
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/agent_management
+    frontend/agent_management/agent_detail_view:
+        dir_name: 智能体详情视图
+        title: 智能体详情视图
+        scope:
+            - frontend/src/pages/agent-detail/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/agent_management
+    frontend/authentication:
+        dir_name: 用户认证与会话管理
+        title: 用户认证与会话管理
+        scope:
+            - frontend/src/pages/Login.tsx
+            - frontend/src/pages/ForgotPassword.tsx
+            - frontend/src/pages/ResetPassword.tsx
+            - frontend/src/pages/VerifyEmail.tsx
+            - frontend/src/pages/CompanySetup.tsx
+            - frontend/src/pages/Onboarding.tsx
+            - frontend/src/pages/OAuthCallback.tsx
+            - frontend/src/pages/SSOEntry.tsx
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/auth_identity
+    frontend/enterprise_settings:
+        dir_name: 企业设置前端平台
+        title: 企业设置前端平台
+        scope:
+            - frontend/src/pages/enterprise-settings/
+            - frontend/src/pages/AdminCompanies.tsx
+            - frontend/src/pages/EnterpriseSettings.tsx
+            - frontend/src/pages/UserManagement.tsx
+            - frontend/src/pages/InvitationCodes.tsx
+            - frontend/src/pages/OKR.tsx
+        source_files: []
+        children:
+            - frontend/enterprise_settings/org_management
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/core_features
+    frontend/enterprise_settings/org_management:
+        dir_name: 企业组织与身份管理
+        title: 企业组织与身份管理
+        scope:
+            - frontend/src/pages/enterprise-settings/tabs/OrgTab.tsx
+            - frontend/src/pages/enterprise-settings/components/
+            - frontend/src/pages/AdminCompanies.tsx
+            - frontend/src/pages/UserManagement.tsx
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    frontend/group_collaboration:
+        dir_name: 群组协作平台前端
+        title: 群组协作平台前端
+        scope:
+            - frontend/src/pages/groups/
+            - frontend/src/pages/Messages.tsx
+        source_files: []
+        children:
+            - frontend/group_collaboration/group_chat
+            - frontend/group_collaboration/group_management
+            - frontend/group_collaboration/group_workspace
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/communication_collaboration
+    frontend/group_collaboration/group_chat:
+        dir_name: 群组消息协作
+        title: 群组消息协作
+        scope:
+            - frontend/src/pages/groups/MessageComposer.tsx
+            - frontend/src/pages/groups/MessageStream.tsx
+            - frontend/src/pages/Messages.tsx
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: backend/api_endpoints/communication_collaboration
+    frontend/group_collaboration/group_management:
+        dir_name: 群组管理与协作
+        title: 群组管理与协作
+        scope:
+            - frontend/src/pages/groups/CreateGroupModal.tsx
+            - frontend/src/pages/groups/GroupSettingsModal.tsx
+            - frontend/src/pages/groups/InviteMemberModal.tsx
+            - frontend/src/pages/groups/GroupsPage.tsx
+            - frontend/src/pages/groups/GroupSidePanel.tsx
+            - frontend/src/pages/groups/InlineEdit.tsx
+            - frontend/src/pages/groups/mentionBindings.ts
+            - frontend/src/pages/groups/groups.css
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    frontend/group_collaboration/group_workspace:
+        dir_name: 群组工作空间文件管理
+        title: 群组工作空间文件管理
+        scope:
+            - frontend/src/pages/groups/GroupWorkspaceTab.tsx
+            - frontend/src/pages/groups/GroupTextFileEditor.tsx
+            - frontend/src/pages/groups/groupWorkspaceUpload.ts
+            - frontend/src/pages/groups/versionedFileAdapter.ts
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    frontend/platform_features:
+        dir_name: 平台功能前端
+        title: 平台功能前端
+        scope:
+            - frontend/src/pages/Dashboard.tsx
+            - frontend/src/pages/Plaza.tsx
+            - frontend/src/pages/OpenClawSettings.tsx
+            - frontend/src/pages/PlatformDashboard.tsx
+            - frontend/src/components/
+            - frontend/src/hooks/
+            - frontend/src/services/
+            - frontend/src/stores/
+            - frontend/src/types/
+            - frontend/src/utils/
+            - frontend/src/styles/
+            - frontend/src/i18n/
+            - frontend/src/App.tsx
+            - frontend/src/main.tsx
+            - frontend/src/index.css
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    helm:
+        dir_name: Clawith应用部署Helm图表
+        title: Clawith应用部署Helm图表
+        scope:
+            - helm/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: deploy

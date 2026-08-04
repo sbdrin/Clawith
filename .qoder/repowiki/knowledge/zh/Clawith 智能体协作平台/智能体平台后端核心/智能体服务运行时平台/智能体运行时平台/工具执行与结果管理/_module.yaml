@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/tools_and_execution
+title: 工具执行与结果管理
+scope:
+    - backend/app/services/agent_runtime/tool_execution.py
+    - backend/app/services/agent_runtime/tool_result_store.py
+    - backend/app/services/agent_runtime/tool_step_service.py
+    - backend/app/services/agent_runtime/tool_exchange.py
+    - backend/app/services/agent_runtime/async_tool_poll.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/sandbox

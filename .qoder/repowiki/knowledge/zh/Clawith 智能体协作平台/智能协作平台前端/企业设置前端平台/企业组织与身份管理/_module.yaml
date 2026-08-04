@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: frontend/enterprise_settings/org_management
+title: 企业组织与身份管理
+scope:
+    - frontend/src/pages/enterprise-settings/tabs/OrgTab.tsx
+    - frontend/src/pages/enterprise-settings/components/
+    - frontend/src/pages/AdminCompanies.tsx
+    - frontend/src/pages/UserManagement.tsx
+source_files: []
+depends_on: []
+related_to: []

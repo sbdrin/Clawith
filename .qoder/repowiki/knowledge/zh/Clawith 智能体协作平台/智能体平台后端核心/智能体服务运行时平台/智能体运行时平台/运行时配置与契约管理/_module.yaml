@@ -1,0 +1,19 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/utilities_and_config
+title: 运行时配置与契约管理
+scope:
+    - backend/app/services/agent_runtime/__init__.py
+    - backend/app/services/agent_runtime/config.py
+    - backend/app/services/agent_runtime/contracts.py
+    - backend/app/services/agent_runtime/adapter.py
+    - backend/app/services/agent_runtime/cancel_source.py
+    - backend/app/services/agent_runtime/checkpoint_side_effects.py
+    - backend/app/services/agent_runtime/model_step_service.py
+    - backend/app/services/agent_runtime/runtime_model_settings.py
+    - backend/app/services/agent_runtime/scheduling_lane.py
+    - backend/app/services/agent_runtime/product_reconciler.py
+    - backend/app/services/agent_runtime/run_compactor.py
+    - backend/app/services/agent_runtime/verification.py
+source_files: []
+depends_on: []
+related_to: []

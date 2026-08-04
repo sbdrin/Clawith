@@ -1,0 +1,16 @@
+schema_version: 1
+module_path: frontend/authentication
+title: 用户认证与会话管理
+scope:
+    - frontend/src/pages/Login.tsx
+    - frontend/src/pages/ForgotPassword.tsx
+    - frontend/src/pages/ResetPassword.tsx
+    - frontend/src/pages/VerifyEmail.tsx
+    - frontend/src/pages/CompanySetup.tsx
+    - frontend/src/pages/Onboarding.tsx
+    - frontend/src/pages/OAuthCallback.tsx
+    - frontend/src/pages/SSOEntry.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/auth_identity

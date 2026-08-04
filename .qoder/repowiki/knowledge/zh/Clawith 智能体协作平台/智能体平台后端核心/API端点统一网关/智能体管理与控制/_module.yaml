@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/api_endpoints/agent_management
+title: 智能体管理与控制
+scope:
+    - backend/app/api/agents.py
+    - backend/app/api/agent_credentials.py
+    - backend/app/api/agentbay_control.py
+source_files: []
+depends_on: []
+related_to:
+    - path: frontend/agent_management
+    - path: frontend/agent_management/agent_detail_view

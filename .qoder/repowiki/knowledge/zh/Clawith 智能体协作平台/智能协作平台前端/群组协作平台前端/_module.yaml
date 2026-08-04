@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: frontend/group_collaboration
+title: 群组协作平台前端
+scope:
+    - frontend/src/pages/groups/
+    - frontend/src/pages/Messages.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/communication_collaboration

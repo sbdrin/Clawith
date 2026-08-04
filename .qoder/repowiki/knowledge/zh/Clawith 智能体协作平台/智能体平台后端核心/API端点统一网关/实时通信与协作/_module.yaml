@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: backend/api_endpoints/communication_collaboration
+title: 实时通信与协作
+scope:
+    - backend/app/api/chat_sessions.py
+    - backend/app/api/messages.py
+    - backend/app/api/websocket.py
+    - backend/app/api/group_websocket.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/collaboration_and_workspace/chat_messaging
+    - path: frontend/group_collaboration
+    - path: frontend/group_collaboration/group_chat

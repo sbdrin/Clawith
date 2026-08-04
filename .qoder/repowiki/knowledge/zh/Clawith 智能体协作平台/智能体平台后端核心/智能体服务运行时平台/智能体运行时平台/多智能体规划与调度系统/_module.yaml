@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/planning
+title: 多智能体规划与调度系统
+scope:
+    - backend/app/services/agent_runtime/planning.py
+    - backend/app/services/agent_runtime/planning_scheduler.py
+    - backend/app/services/agent_runtime/model_capabilities.py
+source_files: []
+depends_on: []
+related_to: []

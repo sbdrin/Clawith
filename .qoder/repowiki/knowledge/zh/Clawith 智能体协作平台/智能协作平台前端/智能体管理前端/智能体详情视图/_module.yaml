@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: frontend/agent_management/agent_detail_view
+title: 智能体详情视图
+scope:
+    - frontend/src/pages/agent-detail/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/agent_management

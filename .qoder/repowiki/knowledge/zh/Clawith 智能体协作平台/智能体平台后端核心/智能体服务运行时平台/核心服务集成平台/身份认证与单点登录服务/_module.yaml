@@ -1,0 +1,16 @@
+schema_version: 1
+module_path: backend/services/core_services/authentication
+title: 身份认证与单点登录服务
+scope:
+    - backend/app/services/auth_provider.py
+    - backend/app/services/auth_registry.py
+    - backend/app/services/identity_provider_lookup.py
+    - backend/app/services/google_workspace_oauth.py
+    - backend/app/services/sso_service.py
+    - backend/app/services/registration_service.py
+    - backend/app/services/email_verification_service.py
+    - backend/app/services/password_reset_service.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/auth_identity

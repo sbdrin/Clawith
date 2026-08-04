@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/core_services/communication_channels/dingtalk
+title: 钉钉通信渠道服务
+scope:
+    - backend/app/services/dingtalk_service.py
+    - backend/app/services/dingtalk_reaction.py
+    - backend/app/services/dingtalk_stream.py
+    - backend/app/services/dingtalk_token.py
+source_files: []
+depends_on: []
+related_to: []

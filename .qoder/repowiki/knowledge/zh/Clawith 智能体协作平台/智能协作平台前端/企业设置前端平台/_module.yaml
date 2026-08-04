@@ -1,0 +1,14 @@
+schema_version: 1
+module_path: frontend/enterprise_settings
+title: 企业设置前端平台
+scope:
+    - frontend/src/pages/enterprise-settings/
+    - frontend/src/pages/AdminCompanies.tsx
+    - frontend/src/pages/EnterpriseSettings.tsx
+    - frontend/src/pages/UserManagement.tsx
+    - frontend/src/pages/InvitationCodes.tsx
+    - frontend/src/pages/OKR.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/core_features

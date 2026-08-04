@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/api_endpoints/core_features/platform_admin_and_onboarding
+title: 平台管理与用户引导模块
+scope:
+    - backend/app/api/admin.py
+    - backend/app/api/onboarding.py
+    - backend/app/api/enterprise.py
+source_files: []
+depends_on: []
+related_to: []

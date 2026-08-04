@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/api_endpoints/core_features/file_and_storage
+title: 文件存储与焦点管理
+scope:
+    - backend/app/api/files.py
+    - backend/app/api/upload.py
+    - backend/app/api/focus.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/storage_and_files

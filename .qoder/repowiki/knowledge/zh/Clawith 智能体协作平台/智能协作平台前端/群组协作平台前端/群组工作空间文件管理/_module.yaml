@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: frontend/group_collaboration/group_workspace
+title: 群组工作空间文件管理
+scope:
+    - frontend/src/pages/groups/GroupWorkspaceTab.tsx
+    - frontend/src/pages/groups/GroupTextFileEditor.tsx
+    - frontend/src/pages/groups/groupWorkspaceUpload.ts
+    - frontend/src/pages/groups/versionedFileAdapter.ts
+source_files: []
+depends_on: []
+related_to: []

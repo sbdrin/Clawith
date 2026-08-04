@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/services/core_services/agent_management/agent_utilities
+title: 智能体实用工具服务
+scope:
+    - backend/app/services/agent_seeder.py
+    - backend/app/services/access_relationships.py
+    - backend/app/services/autonomy_service.py
+source_files: []
+depends_on: []
+related_to: []

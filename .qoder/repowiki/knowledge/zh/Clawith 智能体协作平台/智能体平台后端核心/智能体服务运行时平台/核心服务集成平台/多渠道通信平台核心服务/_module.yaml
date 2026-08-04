@@ -1,0 +1,24 @@
+schema_version: 1
+module_path: backend/services/core_services/communication_channels
+title: 多渠道通信平台核心服务
+scope:
+    - backend/app/services/dingtalk_service.py
+    - backend/app/services/dingtalk_reaction.py
+    - backend/app/services/dingtalk_stream.py
+    - backend/app/services/dingtalk_token.py
+    - backend/app/services/feishu_service.py
+    - backend/app/services/feishu_ws.py
+    - backend/app/services/wechat_channel.py
+    - backend/app/services/wecom_service.py
+    - backend/app/services/wecom_stream.py
+    - backend/app/services/discord_gateway.py
+    - backend/app/services/email_service.py
+    - backend/app/services/notification_service.py
+    - backend/app/services/system_email_service.py
+    - backend/app/services/channel_session.py
+    - backend/app/services/channel_user_service.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/enterprise_integrations
+    - path: backend/services/agent_runtime/delivery_and_channels

@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: backend/models
+title: 数据库模型层
+scope:
+    - backend/app/models/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/agent_templates
+    - path: backend/database_migrations
+    - path: backend/services
+    - path: backend/services/agent_runtime/persistence
+    - path: backend/services/agent_runtime/sessions_and_context
+    - path: backend/services/core_services
+    - path: backend/services/core_services/collaboration_and_workspace
+    - path: backend/services/core_services/okr_management
+    - path: backend/services/core_services/scheduling_and_tasks
+    - path: backend/services/trigger_runtime

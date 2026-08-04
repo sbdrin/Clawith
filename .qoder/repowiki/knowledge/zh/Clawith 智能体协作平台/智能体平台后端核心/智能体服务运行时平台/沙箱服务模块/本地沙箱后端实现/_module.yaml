@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/services/sandbox/local_backends
+title: 本地沙箱后端实现
+scope:
+    - backend/app/services/sandbox/local/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/sandbox/core

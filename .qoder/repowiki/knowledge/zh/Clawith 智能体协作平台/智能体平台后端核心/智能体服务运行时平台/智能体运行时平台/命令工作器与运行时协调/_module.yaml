@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/command_worker
+title: 命令工作器与运行时协调
+scope:
+    - backend/app/services/agent_runtime/command_worker.py
+    - backend/app/services/agent_runtime/worker_service.py
+    - backend/app/services/agent_runtime/cycle_guard.py
+    - backend/app/services/agent_runtime/thread_lock.py
+    - backend/app/services/agent_runtime/thread_visibility.py
+source_files: []
+depends_on: []
+related_to: []

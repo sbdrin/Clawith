@@ -1,0 +1,15 @@
+schema_version: 1
+module_path: frontend/group_collaboration/group_management
+title: 群组管理与协作
+scope:
+    - frontend/src/pages/groups/CreateGroupModal.tsx
+    - frontend/src/pages/groups/GroupSettingsModal.tsx
+    - frontend/src/pages/groups/InviteMemberModal.tsx
+    - frontend/src/pages/groups/GroupsPage.tsx
+    - frontend/src/pages/groups/GroupSidePanel.tsx
+    - frontend/src/pages/groups/InlineEdit.tsx
+    - frontend/src/pages/groups/mentionBindings.ts
+    - frontend/src/pages/groups/groups.css
+source_files: []
+depends_on: []
+related_to: []

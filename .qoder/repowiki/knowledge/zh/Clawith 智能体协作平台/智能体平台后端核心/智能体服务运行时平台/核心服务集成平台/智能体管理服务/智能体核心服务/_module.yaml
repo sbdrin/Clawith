@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/services/core_services/agent_management/agent_core
+title: 智能体核心服务
+scope:
+    - backend/app/services/agent_manager.py
+    - backend/app/services/agent_context.py
+    - backend/app/services/agent_directory.py
+source_files: []
+depends_on: []
+related_to: []

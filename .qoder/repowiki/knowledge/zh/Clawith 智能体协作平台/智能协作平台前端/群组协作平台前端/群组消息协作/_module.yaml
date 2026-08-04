@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: frontend/group_collaboration/group_chat
+title: 群组消息协作
+scope:
+    - frontend/src/pages/groups/MessageComposer.tsx
+    - frontend/src/pages/groups/MessageStream.tsx
+    - frontend/src/pages/Messages.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/communication_collaboration

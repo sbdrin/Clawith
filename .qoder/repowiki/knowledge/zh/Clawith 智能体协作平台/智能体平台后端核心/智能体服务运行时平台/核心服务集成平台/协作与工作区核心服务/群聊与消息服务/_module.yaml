@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/core_services/collaboration_and_workspace/chat_messaging
+title: 群聊与消息服务
+scope:
+    - backend/app/services/chat_session_service.py
+    - backend/app/services/group_chat_service.py
+    - backend/app/services/group_message_service.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/communication_collaboration

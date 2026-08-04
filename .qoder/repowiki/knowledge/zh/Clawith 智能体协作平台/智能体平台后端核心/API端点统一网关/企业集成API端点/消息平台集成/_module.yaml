@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/api_endpoints/enterprise_integrations/messaging_platforms
+title: 消息平台集成
+scope:
+    - backend/app/api/discord_bot.py
+    - backend/app/api/slack.py
+    - backend/app/api/whatsapp.py
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,34 @@
+schema_version: 1
+module_path: backend/api_endpoints/core_features
+title: 核心功能API网关
+scope:
+    - backend/app/api/activity.py
+    - backend/app/api/admin.py
+    - backend/app/api/advanced.py
+    - backend/app/api/directory.py
+    - backend/app/api/enterprise.py
+    - backend/app/api/experience.py
+    - backend/app/api/files.py
+    - backend/app/api/focus.py
+    - backend/app/api/gateway.py
+    - backend/app/api/notification.py
+    - backend/app/api/okr.py
+    - backend/app/api/onboarding.py
+    - backend/app/api/organization.py
+    - backend/app/api/pages.py
+    - backend/app/api/plaza.py
+    - backend/app/api/relationships.py
+    - backend/app/api/schedules.py
+    - backend/app/api/skills.py
+    - backend/app/api/tasks.py
+    - backend/app/api/teams.py
+    - backend/app/api/tenants.py
+    - backend/app/api/tools.py
+    - backend/app/api/triggers.py
+    - backend/app/api/upload.py
+    - backend/app/api/webhooks.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services
+    - path: frontend/enterprise_settings

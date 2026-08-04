@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/services/llm
+title: LLM服务模块
+scope:
+    - backend/app/services/llm/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/agent_runtime
+    - path: backend/services/agent_runtime/core_runtime

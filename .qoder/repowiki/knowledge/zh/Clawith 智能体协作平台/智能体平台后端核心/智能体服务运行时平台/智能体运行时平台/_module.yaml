@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/services/agent_runtime
+title: 智能体运行时平台
+scope:
+    - backend/app/services/agent_runtime/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/agent_management
+    - path: backend/services/llm
+    - path: backend/services/sandbox
+    - path: backend/services/storage_runtime

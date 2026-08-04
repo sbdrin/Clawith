@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/api_endpoints/core_features/task_and_workflow
+title: 任务调度与工作流管理
+scope:
+    - backend/app/api/tasks.py
+    - backend/app/api/schedules.py
+    - backend/app/api/okr.py
+source_files: []
+depends_on: []
+related_to: []

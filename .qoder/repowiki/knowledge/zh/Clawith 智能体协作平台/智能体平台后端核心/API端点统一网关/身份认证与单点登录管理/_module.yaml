@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/api_endpoints/auth_identity
+title: 身份认证与单点登录管理
+scope:
+    - backend/app/api/auth.py
+    - backend/app/api/sso.py
+    - backend/app/api/users.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/authentication
+    - path: frontend/authentication

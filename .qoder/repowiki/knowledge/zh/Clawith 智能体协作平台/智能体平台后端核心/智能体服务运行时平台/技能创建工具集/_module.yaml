@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: backend/services/skill_creator_files
+title: 技能创建工具集
+scope:
+    - backend/app/services/skill_creator_files/
+source_files: []
+depends_on: []
+related_to: []

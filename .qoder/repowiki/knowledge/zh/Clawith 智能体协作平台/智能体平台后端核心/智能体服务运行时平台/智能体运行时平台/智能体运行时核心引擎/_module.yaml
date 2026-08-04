@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/core_runtime
+title: 智能体运行时核心引擎
+scope:
+    - backend/app/services/agent_runtime/a2a_runtime.py
+    - backend/app/services/agent_runtime/langgraph_driver.py
+    - backend/app/services/agent_runtime/graph.py
+    - backend/app/services/agent_runtime/state.py
+    - backend/app/services/agent_runtime/node_executor.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/llm

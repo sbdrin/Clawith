@@ -1,0 +1,29 @@
+schema_version: 1
+module_path: ""
+title: Clawith 智能体协作平台
+scope:
+    - README.md
+    - README_ar.md
+    - README_es.md
+    - README_ja.md
+    - README_ko.md
+    - README_zh-CN.md
+    - CLAUDE.md
+    - AGENTS.md
+    - CONTRIBUTING.md
+    - PRIVATE_CHAT_FINISH_MIGRATION_PLAN.md
+    - .gitignore
+    - .gitattributes
+    - docker-compose.yml
+    - docker-compose.cd.yml
+    - docker-compose.ci.yml
+    - setup.sh
+    - restart.sh
+    - skills-lock.json
+    - .clawith-local-designs/
+    - .github/
+    - .env.example
+    - LICENSE
+source_files: []
+depends_on: []
+related_to: []

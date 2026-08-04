@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/agent_templates
+title: 智能体模板管理
+scope:
+    - backend/agent_templates/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

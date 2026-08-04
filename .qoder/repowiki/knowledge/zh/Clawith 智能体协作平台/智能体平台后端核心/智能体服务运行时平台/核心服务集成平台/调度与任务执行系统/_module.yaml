@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/services/core_services/scheduling_and_tasks
+title: 调度与任务执行系统
+scope:
+    - backend/app/services/scheduler.py
+    - backend/app/services/trigger_daemon.py
+    - backend/app/services/heartbeat.py
+    - backend/app/services/heartbeat_runtime.py
+    - backend/app/services/task_executor.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: backend/database_migrations
+title: 数据库迁移管理
+scope:
+    - backend/alembic/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

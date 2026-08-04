@@ -1,0 +1,17 @@
+schema_version: 1
+module_path: backend/api_endpoints/enterprise_integrations
+title: 企业集成API端点
+scope:
+    - backend/app/api/atlassian.py
+    - backend/app/api/dingtalk.py
+    - backend/app/api/discord_bot.py
+    - backend/app/api/feishu.py
+    - backend/app/api/google_workspace.py
+    - backend/app/api/slack.py
+    - backend/app/api/wechat.py
+    - backend/app/api/wecom.py
+    - backend/app/api/whatsapp.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/communication_channels

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/persistence
+title: 运行时持久化与检查点管理
+scope:
+    - backend/app/services/agent_runtime/persistence.py
+    - backend/app/services/agent_runtime/checkpointer.py
+    - backend/app/services/agent_runtime/run_state_reader.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/sessions_and_context
+title: 会话上下文管理与压缩服务
+scope:
+    - backend/app/services/agent_runtime/context_builder.py
+    - backend/app/services/agent_runtime/session_context_service.py
+    - backend/app/services/agent_runtime/session_context_background.py
+    - backend/app/services/agent_runtime/session_context_compactor.py
+    - backend/app/services/agent_runtime/session_context_completion.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/models

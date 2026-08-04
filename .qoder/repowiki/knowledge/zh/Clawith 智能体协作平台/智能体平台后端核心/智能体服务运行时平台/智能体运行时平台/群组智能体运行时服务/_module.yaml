@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/groups
+title: 群组智能体运行时服务
+scope:
+    - backend/app/services/agent_runtime/group_at.py
+    - backend/app/services/agent_runtime/group_context_builder.py
+    - backend/app/services/agent_runtime/group_handoff.py
+    - backend/app/services/agent_runtime/group_runtime_tools.py
+source_files: []
+depends_on: []
+related_to: []

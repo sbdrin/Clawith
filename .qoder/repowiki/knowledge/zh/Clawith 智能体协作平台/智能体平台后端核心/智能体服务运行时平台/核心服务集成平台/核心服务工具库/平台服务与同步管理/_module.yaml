@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/core_services/utilities_and_misc/platform_and_sync
+title: 平台服务与同步管理
+scope:
+    - backend/app/services/platform_service.py
+    - backend/app/services/enterprise_sync.py
+    - backend/app/services/org_sync_adapter.py
+    - backend/app/services/org_sync_service.py
+source_files: []
+depends_on: []
+related_to: []

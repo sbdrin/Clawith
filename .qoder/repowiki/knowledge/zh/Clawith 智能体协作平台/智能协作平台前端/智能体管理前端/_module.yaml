@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: frontend/agent_management
+title: 智能体管理前端
+scope:
+    - frontend/src/pages/agent-detail/
+    - frontend/src/pages/AgentCreate.tsx
+    - frontend/src/pages/AgentDetail.tsx
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints/agent_management

@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/agent_runtime/delivery_and_channels
+title: 运行时消息传递与渠道交付
+scope:
+    - backend/app/services/agent_runtime/delivery.py
+    - backend/app/services/agent_runtime/channel_delivery.py
+    - backend/app/services/agent_runtime/channel_provider_delivery.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/core_services/communication_channels

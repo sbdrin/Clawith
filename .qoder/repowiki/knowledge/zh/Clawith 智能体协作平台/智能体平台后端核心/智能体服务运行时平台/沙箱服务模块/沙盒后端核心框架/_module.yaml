@@ -1,0 +1,13 @@
+schema_version: 1
+module_path: backend/services/sandbox/core
+title: 沙盒后端核心框架
+scope:
+    - backend/app/services/sandbox/base.py
+    - backend/app/services/sandbox/config.py
+    - backend/app/services/sandbox/registry.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/sandbox/api_backends
+    - path: backend/services/sandbox/local_backends
+    - path: backend/services/sandbox/remote_backends

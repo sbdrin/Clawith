@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: backend/services
+title: 智能体服务运行时平台
+scope:
+    - backend/app/services/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/api_endpoints
+    - path: backend/models

@@ -1,0 +1,28 @@
+schema_version: 1
+module_path: backend/services/core_services/utilities_and_misc
+title: 核心服务工具库
+scope:
+    - backend/app/services/activity_logger.py
+    - backend/app/services/audit_logger.py
+    - backend/app/services/business_calendar.py
+    - backend/app/services/experience_retrieval.py
+    - backend/app/services/mcp_client.py
+    - backend/app/services/onboarding.py
+    - backend/app/services/participant_identity.py
+    - backend/app/services/platform_service.py
+    - backend/app/services/quota_guard.py
+    - backend/app/services/resource_discovery.py
+    - backend/app/services/skill_creator_content.py
+    - backend/app/services/skill_seeder.py
+    - backend/app/services/template_seeder.py
+    - backend/app/services/timezone_utils.py
+    - backend/app/services/token_tracker.py
+    - backend/app/services/tool_config.py
+    - backend/app/services/tool_seeder.py
+    - backend/app/services/vision_inject.py
+    - backend/app/services/enterprise_sync.py
+    - backend/app/services/org_sync_adapter.py
+    - backend/app/services/org_sync_service.py
+source_files: []
+depends_on: []
+related_to: []

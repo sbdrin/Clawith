@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/services/core_services/collaboration_and_workspace/workspace_management
+title: 工作区协作与锁定管理
+scope:
+    - backend/app/services/workspace_collaboration.py
+    - backend/app/services/workspace_locking.py
+    - backend/app/services/workspace_paths.py
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/storage_runtime

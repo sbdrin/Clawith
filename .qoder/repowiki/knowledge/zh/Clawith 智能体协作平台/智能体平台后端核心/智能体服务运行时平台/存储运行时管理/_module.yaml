@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: backend/services/storage_runtime
+title: 存储运行时管理
+scope:
+    - backend/app/services/storage_runtime/
+source_files: []
+depends_on: []
+related_to:
+    - path: backend/services/agent_runtime
+    - path: backend/services/core_services/collaboration_and_workspace/workspace_management
+    - path: backend/services/core_services/storage_and_files
+    - path: backend/services/document_conversion

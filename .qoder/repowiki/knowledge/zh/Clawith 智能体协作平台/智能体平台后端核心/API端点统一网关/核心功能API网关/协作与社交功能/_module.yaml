@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: backend/api_endpoints/core_features/collaboration_and_social
+title: 协作与社交功能
+scope:
+    - backend/app/api/plaza.py
+    - backend/app/api/relationships.py
+    - backend/app/api/advanced.py
+    - backend/app/api/notification.py
+source_files: []
+depends_on: []
+related_to: []
