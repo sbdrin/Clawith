@@ -276,7 +276,7 @@ class SubprocessBackend(BaseSandboxBackend):
 
         return _preexec
 
-    def _build_bwrap_command(self, command: list[str], work_path: Path, venv_path: Path) -> list[str] | None:
+    def _build_bwrap_command(self, command: list[str], work_path: Path, venv_path: Path, uv_cache: Path) -> list[str] | None:
         bwrap = shutil.which("bwrap")
         if not bwrap:
             if not SubprocessBackend._bwrap_missing_warned:
@@ -305,7 +305,7 @@ class SubprocessBackend(BaseSandboxBackend):
             "--unshare-uts",
             "--unshare-cgroup-try",
             *base_binds,
-            "--bind", "/data/agents/.uv-cache", "/uv-cache",
+            "--bind", str(uv_cache), "/uv-cache",
             "--bind", str(work_path), "/workspace",
             "--bind", str(venv_path), "/workspace/.venv",
             "--dev", "/dev",
@@ -419,15 +419,18 @@ class SubprocessBackend(BaseSandboxBackend):
         (work_path / ".tmp").mkdir(parents=True, exist_ok=True)
         (work_path / ".tmp" / "pip-cache").mkdir(parents=True, exist_ok=True)
         
+        # Load agent data root and ensure global uv cache exists
+        from app.config import get_settings
+        settings = get_settings()
+        agents_root = Path(settings.AGENT_DATA_DIR).resolve()
+        uv_cache = agents_root / ".uv-cache"
+        uv_cache.mkdir(parents=True, exist_ok=True)
+
         # Determine persistent venv path if possible
         if agent_id:
             # We place the virtual environment in a persistent location
-            venv_path = Path("/data/agents").resolve() / str(agent_id) / ".venv"
+            venv_path = agents_root / str(agent_id) / ".venv"
             venv_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Ensure global uv cache exists
-            uv_cache = Path("/data/agents/.uv-cache")
-            uv_cache.mkdir(parents=True, exist_ok=True)
         else:
             venv_path = work_path / ".venv"
 
@@ -447,7 +450,7 @@ class SubprocessBackend(BaseSandboxBackend):
             script_path.write_text(code, encoding="utf-8")
 
             sandbox_command = self._build_command(language, f"/workspace/{script_path.name}")
-            bwrap_command = self._build_bwrap_command(sandbox_command, work_path, venv_path)
+            bwrap_command = self._build_bwrap_command(sandbox_command, work_path, venv_path, uv_cache)
             if not bwrap_command:
                 if not self.config.allow_unsafe_fallback_when_bwrap_missing:
                     duration_ms = int((time.time() - start_time) * 1000)

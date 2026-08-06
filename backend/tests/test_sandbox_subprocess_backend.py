@@ -99,13 +99,19 @@ def test_subprocess_backend_proxy_bwrap_command(monkeypatch, tmp_path: Path) -> 
         https_proxy="http://proxy.example.com:8443",
     )
     backend = SubprocessBackend(config)
-    cmd = backend._build_bwrap_command(["python3", "-c", "print(1)"], tmp_path, tmp_path / ".venv")
+    uv_cache = tmp_path / ".uv-cache"
+    cmd = backend._build_bwrap_command(
+        ["python3", "-c", "print(1)"], tmp_path, tmp_path / ".venv", uv_cache
+    )
 
     assert cmd is not None
     assert "--unshare-cgroup-try" in cmd
     assert "--unshare-cgroup" not in cmd
     assert "--unshare-user" not in cmd
     assert "--setenv" in cmd
+    idx_bind = cmd.index("--bind")
+    assert cmd[idx_bind + 1] == str(uv_cache)
+    assert cmd[idx_bind + 2] == "/uv-cache"
     idx_http = cmd.index("http_proxy")
     assert cmd[idx_http + 1] == "http://proxy.example.com:8080"
     idx_https = cmd.index("https_proxy")
