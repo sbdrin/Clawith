@@ -45,7 +45,7 @@ async def create_sso_session(
     )
     return {"session_id": str(session.id), "expires_at": session.expires_at}
 
-@router.get("/sso/session/{sid}/status")
+@router.get("/sso/session/{sid}/status") 
 async def get_sso_session_status(
     sid: uuid.UUID,
     request: Request,
